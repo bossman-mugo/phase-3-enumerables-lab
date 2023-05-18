@@ -28,10 +28,11 @@ end
 # "hello" * 3 == "hellohellohello"
 def print_spicy_foods(spicy_foods)
   spicy_foods.each do |food|
-    heat_level_emoji = '🌶️' * food[:heat_level]
-    puts "#{food[:name]} (#{food[:cuisine]}) | Heat Level: #{heat_level_emoji} "
+    heat_level_emoji = 'emoji' * food[:heat_level]
+    puts "#{food[:name]} (#{food[:cuisine]}) | Heat Level: #{heat_level_emoji}"
   end
 end
+
 
 # given an array of spicy foods and a string representing a cuisine, **return a single hash**  
 # for the spicy food whose cuisine matches the cuisine being passed to the method
@@ -51,11 +52,12 @@ end
 # Buffalo Wings (American) | Heat Level: 🌶🌶🌶
 # HINT: Try to use methods you've already written to solve this!
 def print_spiciest_foods(spicy_foods)
-  spiciest_foods(spicy_foods).each do |food|
+  spicy_foods.each do |food|
     heat_level_emoji = '🌶️' * food[:heat_level]
     puts "#{food[:name]} (#{food[:cuisine]}) | Heat Level: #{heat_level_emoji}"
   end
 end
+
 
 # given an array of spicy foods, return an integer representing 
 # the average heat level of all the spicy foods in the array
