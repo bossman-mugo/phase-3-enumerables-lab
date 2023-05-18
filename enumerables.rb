@@ -51,7 +51,10 @@ end
 # Buffalo Wings (American) | Heat Level: 🌶🌶🌶
 # HINT: Try to use methods you've already written to solve this!
 def print_spiciest_foods(spicy_foods)
-  # your code here
+  spiciest_foods(spicy_foods).each do |food|
+    heat_level_emoji = '🌶️' * food[:heat_level]
+    puts "#{food[:name]} (#{food[:cuisine]}) | Heat Level: #{heat_level_emoji}"
+  end
 end
 
 # given an array of spicy foods, return an integer representing 
